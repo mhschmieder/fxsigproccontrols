@@ -103,33 +103,6 @@ public final class SigprocControlFactory {
         return delayEditor;
     }
 
-    // Helper method to get a standalone Frequency Editor.
-    public static FrequencyEditor getFrequencyEditor( final ClientProperties clientProperties,
-                                                      final String tooltipText,
-                                                      final String measurementUnitString,
-                                                      final double minimumValue,
-                                                      final double maximumValue,
-                                                      final double initialValue,
-                                                      final double pPrecisionCutoffFrequencyHz,
-                                                      final int pNumberOfDecimalPlaces ) {
-        // Get the current value and format it as initial text.
-        // TODO: Make sure this is locale-sensitive?
-        final String initialText = Double.toString( initialValue );
-
-        final FrequencyEditor frequencyEditor = new FrequencyEditor( clientProperties,
-                                                                     initialText,
-                                                                     tooltipText,
-                                                                     minimumValue,
-                                                                     maximumValue,
-                                                                     initialValue,
-                                                                     pPrecisionCutoffFrequencyHz,
-                                                                     pNumberOfDecimalPlaces );
-
-        frequencyEditor.setMeasurementUnitString( measurementUnitString );
-
-        return frequencyEditor;
-    }
-
     // This is a helper method to get a standalone Gain Editor.
     public static GainEditor getGainEditor( final ClientProperties clientProperties,
                                             final String measurementUnitString,
